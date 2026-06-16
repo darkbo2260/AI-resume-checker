@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI简历分析</title>
+</head>
+<body>
+    <textarea id="input" placeholder="粘贴你的简历内容"></textarea>
+    <button onclick="send()">分析</button>
+    <div id="result"></div>
+
+    <script>
+        async function send() {
+            const text = document.getElementById("input").value
+            const res = await fetch("/analyze", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({text: text})
+            })
+            const data = await res.json()
+            document.getElementById("result").innerText = data.result
+        }
+    </script>
+</body>
+</html>
