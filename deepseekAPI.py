@@ -1,5 +1,5 @@
 import requests
-api_key="sk-292f9a67b33f4b7e9af32d34b3a3625d"
+api_key="不告诉你喵"
 response=requests.post(
     "https://api.deepseek.com/chat/completions",
     headers={"Authorization": f"Bearer {api_key}"},
