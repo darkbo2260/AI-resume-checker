@@ -1,0 +1,19 @@
+<body>
+    <input type="file" id="pdffile" accept=".pdf">
+    <button onclick="send()">分析</button>
+    <div id="result"></div>
+
+    <script>
+        async function send() {
+            const file = document.getElementById("pdffile").files[0]
+            const formData = new FormData()
+            formData.append("file", file)
+            const res = await fetch("/analyze", {
+                method: "POST",
+                body: formData
+            })
+            const data = await res.json()
+            document.getElementById("result").innerText = data.result
+        }
+    </script>
+</body>
