@@ -19,17 +19,15 @@
 
 在准备暑期实习投递的过程中，发现市面上缺少针对在校生的简历快速反馈工具，因此开发了这个小工具，用于自动分析简历内容、给出改进建议。
 
-## 运行方式
+## 在线访问
+https://ai-resume-checker-84rq.onrender.com
 
-```bash
+## 本地运行
 pip install flask PyPDF2 requests
 python app.py
-```
-
-访问 `http://127.0.0.1:5001`
+访问 http://127.0.0.1:5001
 
 ## 待完善功能
-- [ ] 部署到公网（Railway/Render）
 - [ ] 增加面试模拟问题生成
 
 ## 开发说明
