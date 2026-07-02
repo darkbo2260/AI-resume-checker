@@ -21,7 +21,7 @@ def init_db():
     conn.close()
 
 init_db()
-api_key = "不告诉你喵"
+api_key = os.environ.get("DEEPSEEK_API_KEY")
 
 
 @app.route("/")
